@@ -2,8 +2,14 @@ import type { NextPage } from 'next'
 import {Fragment} from "react";
 import ProductsList from "../components/productList/ProductList";
 
-type ProductDetails = {
+export type ProductDetails = {
+  key: string,
   name: string,
+  image: string,
+  discount: number,
+  totalPrice: number,
+  discountedPrice: number,
+  url: string,
 }
 
 export type ProductProps = {
@@ -28,7 +34,13 @@ export async function getStaticProps() {
   return {
     props: {
       products: products.map((product: any) => ({
+        key: product.name,
         name: product.name,
+        image: product.images.medium,
+        discount: 100 - product.price.sell * 100 / product.price.to_discount,
+        totalPrice: product.price.to_discount,
+        discountedPrice: product.price.sell,
+        url: product.url,
       })),
     },
   };

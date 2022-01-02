@@ -7,8 +7,13 @@ function ProductsList(props: ProductProps) {
         <ul className={classes.list}>
             {props.products.map(product => (
                 <ProductDetails
-                    key={product.name}
+                    key={product.key}
                     name={product.name}
+                    image={product.image}
+                    discount={product.discount}
+                    totalPrice={product.totalPrice}
+                    discountedPrice={product.discountedPrice}
+                    url={product.url}
                 />
             ))}
         </ul>
