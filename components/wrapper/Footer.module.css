@@ -1,0 +1,47 @@
+.footer {
+    background-color: #1d1d1d;
+    color: white;
+    height: 700px;
+    justify-content: space-between;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+
+.list > ul > li {
+    list-style-type: none;
+}
+
+.footerNotes {
+    justify-content: space-between;
+}
+
+.footerNotes > div {
+    width: 33%;
+    font-size: 10px;
+}
+
+.notesLeft {
+    padding: 10px;
+}
+
+.paymentMethods {
+    filter: grayscale(100%);
+}
+
+.paymentMethods > img {
+    width: 20%;
+    height: auto;
+}
+
+.notesRight {
+    text-align: end;
+    padding: 10px;
+}

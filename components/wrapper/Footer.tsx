@@ -1,21 +1,20 @@
 import classes from './Footer.module.css';
-import {Fragment} from "react";
 
 function Footer(props: any) {
     return (
-        <footer >
-            <div>
-                <div>
+        <footer className={`${classes.column} ${classes.footer}`}>
+            <div className={classes.row}>
+                <div className={classes.column}>
                     <div>
                         <img src='/svg/motogp-logo.svg' className={classes.motogpLogo} />
                     </div>
-                    <div>
+                    <div className={classes.row}>
                         <p>TOP CATEGORIES</p>
                         <p>CUSTOMER CARE</p>
                     </div>
-                    <div>
+                    <div className={`${classes.row} ${classes.list}`}>
                         <ul>
-                            <li>MotoGp Brands</li>
+                            <li>MotoGP Brands</li>
                             <li>Motorcycle Brands</li>
                             <li>eSPORTS</li>
                             <li>Outlet</li>
@@ -34,7 +33,7 @@ function Footer(props: any) {
                         </ul>
                     </div>
                 </div>
-                <div>
+                <div className={classes.wrapper}>
                     <p>MotoGP Newsletter</p>
                     <p>Subscribe to the Newsletter to get the 10% off</p>
                 </div>
@@ -42,15 +41,19 @@ function Footer(props: any) {
             <div>
                 <img src='/svg/logo-icon-white.svg' className={classes.logoIconWhite} />
             </div>
-            <div>
-                <p>MotoGP Store © 2022  |  Kooomo By Zerogrey  |  P. IVA IT08003340018</p>
-                <div>
+            <div className={`${classes.row} ${classes.footerNotes}`}>
+                <div className={classes.notesLeft}>
+                    <p>MotoGP Store © 2022  |  Kooomo By Zerogrey  |  P. IVA IT08003340018</p>
+                </div>
+                <div className={classes.paymentMethods}>
                     <img src='/images/visa_hr.png' className={classes.motogpLogo} />
                     <img src='/images/maestro_hr.png' className={classes.motogpLogo} />
                     <img src='/images/mastercard_hr.png' className={classes.motogpLogo} />
                     <img src='/images/paypal_hr.png' className={classes.motogpLogo} />
                 </div>
-                <p>Sitemap | Privacy Policy</p>
+                <div className={classes.notesRight}>
+                    <p>Sitemap | Privacy Policy</p>
+                </div>
             </div>
         </footer>
     );
