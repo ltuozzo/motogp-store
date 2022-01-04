@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import {Fragment} from "react";
 import ProductsList from "../components/productList/ProductList";
+import Hero from "../components/hero/Hero";
 
 export type ProductDetails = {
   key: string,
@@ -19,6 +20,7 @@ export type ProductProps = {
 const Home: NextPage<ProductProps> = (props) => {
   return (
       <Fragment>
+        <Hero />
         <ProductsList products={props.products} />
       </Fragment>
   )
