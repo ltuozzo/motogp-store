@@ -5,7 +5,6 @@ function Navigation(props: any) {
     return (
         <header >
 
-
         </header>
     );
 }

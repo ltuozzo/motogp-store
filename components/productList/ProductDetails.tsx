@@ -10,7 +10,7 @@ function ProductDetails(props: ProductDetails) {
     }
     return(
         <li onClick={() => itemClickedHandler()} className={classes.item}>
-            <img src='/images/favorite-icon.svg' className={classes.favoriteIcon} />
+            <img src='/svg/favorite.svg' className={classes.favoriteIcon} />
             <img src={props.image} className={classes.productImage}/>
             <p className={classes.discount}>{props.discount}%</p>
             <p className={classes.name}>{props.name}</p>
