@@ -39,7 +39,7 @@ export async function getStaticProps() {
         key: product.name,
         name: product.name,
         image: product.images.medium,
-        discount: 100 - product.price.sell * 100 / product.price.to_discount,
+        discount: Math.round(100 - product.price.sell * 100 / product.price.to_discount),
         totalPrice: product.price.to_discount,
         discountedPrice: product.price.sell,
         url: product.url,
