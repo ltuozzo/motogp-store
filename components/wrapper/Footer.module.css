@@ -123,4 +123,16 @@
         text-align: start;
         padding: 10px;
     }
+
+    .inputEmail{
+        width: 11rem;
+    }
+
+    .submit {
+        width: 7rem
+    }
+
+    .arrow {
+        display: none;
+    }
 }
