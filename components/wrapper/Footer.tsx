@@ -1,6 +1,6 @@
 import classes from './Footer.module.css';
 
-function Footer(props: any) {
+function Footer() {
     return (
         <footer className={`${classes.column} ${classes.footer}`}>
             <div className={classes.row}>
