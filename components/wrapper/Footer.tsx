@@ -4,38 +4,44 @@ function Footer() {
     return (
         <footer className={`${classes.column} ${classes.footer}`}>
             <div className={classes.row}>
-                <div className={classes.column}>
+                <div className={`${classes.column} ${classes.leftColumn}`}>
                     <div>
                         <img src='/svg/motogp-logo.svg' className={classes.motogpLogo} />
                     </div>
-                    <div className={classes.row}>
-                        <p>TOP CATEGORIES</p>
-                        <p>CUSTOMER CARE</p>
-                    </div>
                     <div className={`${classes.row} ${classes.list}`}>
-                        <ul>
-                            <li>MotoGP Brands</li>
-                            <li>Motorcycle Brands</li>
-                            <li>eSPORTS</li>
-                            <li>Outlet</li>
-                        </ul>
-                        <ul>
-                            <li>Help & Contact</li>
-                            <li>Shop info</li>
-                            <li>Shipping and Delivery</li>
-                            <li>Return policy</li>
-                        </ul>
-                        <ul>
-                            <li>Privacy Policy</li>
-                            <li>Terms and conditions</li>
-                            <li>Track orders</li>
-                            <li>Contact</li>
-                        </ul>
+                        <div className={classes.links}>
+                            <p>TOP CATEGORIES</p>
+                            <p>MotoGP Brands</p>
+                            <p>Motorcycle Brands</p>
+                            <p>eSPORTS</p>
+                            <p>Outlet</p>
+                        </div>
+                        <div className={classes.links}>
+                            <p>CUSTOMER CARE</p>
+                            <p>Help & Contact</p>
+                            <p>Shop info</p>
+                            <p>Shipping and Delivery</p>
+                            <p>Return policy</p>
+                        </div>
+                        <div className={classes.links}>
+                            <br/><br/>
+                            <p>Privacy Policy</p>
+                            <p>Terms and conditions</p>
+                            <p>Track orders</p>
+                            <p>Contact</p>
+                        </div>
                     </div>
                 </div>
                 <div className={classes.wrapper}>
-                    <p>MotoGP Newsletter</p>
+                    <p className={classes.title}>MotoGP Newsletter</p>
                     <p>Subscribe to the Newsletter to get the 10% off</p>
+                    <div>
+                        <input type='email' name='email' placeholder='Insert your email' className={classes.inputEmail}/>
+                        <button type='submit' title='Submit' className={classes.submit}>
+                            Submit
+                            <img src='/svg/arrow.svg' className={classes.arrow} />
+                        </button>
+                    </div>
                 </div>
             </div>
             <div>
