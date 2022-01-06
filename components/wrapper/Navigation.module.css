@@ -90,7 +90,6 @@
 .open .mobileMenu {
     display: flex;
     flex-direction: column;
-    align-items: start;
     justify-content: flex-start;
 }
 
