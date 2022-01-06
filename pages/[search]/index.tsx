@@ -3,11 +3,16 @@ import {Fragment} from "react";
 import ProductsList from "../../components/productList/ProductList";
 import Hero from "../../components/hero/Hero";
 import { ProductProps } from '../index';
+import Head from "next/head";
 
 
 const Home: NextPage<ProductProps> = (props) => {
     return (
         <Fragment>
+            <Head>
+                <title>MotoGP Store</title>
+                <meta name='MotoGP Store' content='Buy all your MotoGp clothes here!' />
+            </Head>
             <Hero />
             <ProductsList products={props.products} />
         </Fragment>
