@@ -35,6 +35,8 @@ export async function getStaticProps() {
 
   return {
     props: {
+      // I'm only using type any because writing the whole type of this particular value would be a waste of time for the purpose of this exercise
+      // given how big is the information of a single product.
       products: products.map((product: any) => ({
         key: product.name,
         name: product.name,
