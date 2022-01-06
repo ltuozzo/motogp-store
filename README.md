@@ -12,23 +12,23 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Technologies used
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+- Next.js: I decided to use this framework because it works great with SEO, and since this is an eCommerce page, google placement is very important. Next.js works with react, but renders the HTML on the server so that google crawlers can get information from the page once it's loaded.
+- TypeScript: When working with API's I like working with TS, because it helps me organize the data that I'm expecting to work with when creating a new component. Big red alerts come up when types don't match and it helps to avoid issues.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Notably missing
 
-## Learn More
+- Scss: I don't know why I didn't install it when I created the project, and by the time I realized I wasn't using it, I was already half-way through. The end result would have probably been the same, but the code would probably have been tidier.
 
-To learn more about Next.js, take a look at the following resources:
+## Final notes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+I left a couple of comments on the code regarding some decisions I made. The whole page is a little rough around the edges. I didn't have a lot of time to polish, since I only started working on this after coming back from spending the holidays with my family. Also, only having a jpg as a design, meant that I had to take some liberties regarding the stiling, some of which, I consider to be an improvement, others, not so much.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+All in all, it took me around 24hs hours to develop, spread across four days.
 
-## Deploy on Vercel
+I'll be happy to answer any questions you may have regarding the website.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Warm regards,
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Lucas Tuozzo
