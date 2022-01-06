@@ -1,8 +1,14 @@
 import classes from './Navigation.module.css';
 import React from "react";
+import {useRouter} from "next/router";
 
 function Navigation() {
     const menu = React.useRef() as React.MutableRefObject<HTMLDivElement>
+    const router = useRouter();
+
+    function logoClickedHandler() {
+        router.push('/');
+    }
 
     function toggleMobileMenu() {
         menu.current.classList.toggle(classes.open);
@@ -10,7 +16,7 @@ function Navigation() {
 
     return (
         <header className={classes.navigation}>
-            <img src='/svg/motogp-logo.svg' className={classes.motogpLogo} />
+            <img src='/svg/motogp-logo.svg' className={classes.motogpLogo} onClick={() => logoClickedHandler()}/>
             <div className={classes.hamburgerIcon} onClick={() => toggleMobileMenu()} ref={menu}>
                 <div className={classes.bar1}/>
                 <div className={classes.bar2}/>
