@@ -1,0 +1,57 @@
+.hero {
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+.imageContainer {
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.backgroundImage {
+    width: 100%;
+    position: relative;
+    z-index: -2;
+}
+
+.text {
+    position: absolute;
+    left: 5rem;
+    width: 25rem;
+    color: white;
+    text-shadow: 0 0 2px #000;
+}
+
+@media only screen and (min-width: 600px) {
+    .imageContainer {
+        box-shadow: inset 50vw 0px 20vw 0px rgba(0,0,0,0.9);
+    }
+
+    .text {
+        top: 5rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .imageContainer {
+        box-shadow: inset 0px -50vw 40vw 0px rgba(0,0,0,0.9);
+    }
+    .backgroundImage {
+        height: 100%;
+        width: auto;
+        overflow: hidden;
+        position: absolute;
+        z-index: -2;
+    }
+    .text {
+        position: absolute;
+        bottom: 3rem;
+        left: 5rem;
+        width: 25rem;
+        color: white;
+        text-shadow: 0 0 2px #000;
+    }
+}
+
