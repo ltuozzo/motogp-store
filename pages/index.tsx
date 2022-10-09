@@ -32,7 +32,7 @@ const Home: NextPage<ProductProps> = (props) => {
 }
 
 export async function getStaticProps() {
-  const response = await fetch('http://interviews-env.b8amvayt6w.eu-west-1.elasticbeanstalk.com/products', {
+  const response = await fetch('https://fakestoreapi.com/products', {
     method: 'GET',
   })
 
@@ -43,13 +43,13 @@ export async function getStaticProps() {
       // I'm only using type any because writing the whole type of this particular value would be a waste of time for the purpose of this exercise
       // given how big is the information of a single product.
       products: products.map((product: any) => ({
-        key: product.name,
-        name: product.name,
-        image: product.images.medium,
-        discount: Math.round(100 - product.price.sell * 100 / product.price.to_discount),
-        totalPrice: product.price.to_discount,
-        discountedPrice: product.price.sell,
-        url: product.url,
+        key: product.title,
+        name: product.title,
+        image: product.image,
+        discount: 15,
+        totalPrice: product.price,
+        discountedPrice: product.price,
+        url: product.image,
       })),
     },
   };

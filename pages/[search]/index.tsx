@@ -20,7 +20,7 @@ const Home: NextPage<ProductProps> = (props) => {
 }
 
 export async function getStaticPaths() {
-    const response = await fetch('http://interviews-env.b8amvayt6w.eu-west-1.elasticbeanstalk.com/products', {
+    const response = await fetch('https://fakestoreapi.com/products', {
         method: 'GET',
     })
 
@@ -44,7 +44,7 @@ export async function getStaticProps(context: any) {
     // This will break when searching for a t-shirt, I would fix it if this page were to see the light of day.
     search = search.replace(/-/g, '%20')
 
-    const response = await fetch('http://interviews-env.b8amvayt6w.eu-west-1.elasticbeanstalk.com/products?search=' + search, {
+    const response = await fetch('https://fakestoreapi.com/products/' + search, {
         method: 'GET',
     })
 
