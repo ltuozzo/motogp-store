@@ -12,6 +12,12 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## 10/10/2022 Update
+
+The previous API is no longer available so I had to replace it with a new one. This new API doesn't have a search callback, so I had to disable the functionality. I could filter my previous results and display that, but the website was designed and created to work with a different API, and I'd like the code to reflect that. 
+
+If I knew that I would be working with this second API, I would have designed the architecture differently to better optimise it's use. Fixing it now would require either, a big rewrite of the code, or a hackish and messy solution that doesn't fit the objective of this project.
+
 ## Technologies used
 
 - Next.js: I decided to use this framework because it works great with SEO, and since this is an eCommerce page, google placement is very important. Next.js works with react, but renders the HTML on the server so that google crawlers can get information from the page once it's loaded.
